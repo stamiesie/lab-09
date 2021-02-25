@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getBook, updateBook, getCategories, getCategoryId } from './api-utils';
+import { getBook, updateBook, getCategories, deleteBook } from './api-utils';
 
 export default class DetailPage extends Component {
     state = {
@@ -62,6 +62,10 @@ export default class DetailPage extends Component {
         this.props.history.push('/books');
     }
 
+    handleDeleteClick = async () => {
+        await deleteBook(this.props.match.params.bookId);
+    }
+
 
 
     render() {
@@ -103,6 +107,7 @@ export default class DetailPage extends Component {
                         </label>
 
                         <button>Update Book</button>
+                        <button onClick={this.handleDeleteClick}>Delete</button>
                     </form>
                 </div>
             </div>

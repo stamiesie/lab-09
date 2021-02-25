@@ -23,7 +23,7 @@ export default class ListPage extends Component {
                 <div className="list-booklist">
 
                     {this.state.books.map(book => <Link
-                        to={`books/${book.id}`} key={book.name}>
+                        to={`books/${book.id}`} key={book.id}>
                         <div className="list-book-item">
                             <p>Title: {book.title}</p>
                             <p> Category: {book.category}</p>

@@ -8,7 +8,7 @@ export default class Header extends Component {
                 <div className="nav-bar">
                     <NavLink className="nav-button" exact activeClassName="selected" to="/">Home Page</NavLink>
                     <NavLink className="nav-button" exact activeClassName="selected" to="/books">List Page</NavLink>
-                    <NavLink className="nav-button" exact activeClassName="selected" to="/books/:bookId">Detail Page</NavLink>
+                    {/* <NavLink className="nav-button" exact activeClassName="selected" to="/books/:bookId">Detail Page</NavLink> */}
                     <NavLink className="nav-button" exact activeClassName="selected" to="/create">Create Page</NavLink>
                 </div>
             </header>
