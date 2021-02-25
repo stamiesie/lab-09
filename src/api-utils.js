@@ -39,3 +39,5 @@ export async function getCategories() {
 
     return response.body;
 }
+
+export const getCategoryId = (book, categories) => categories.find(category => book.category === category.name).id;

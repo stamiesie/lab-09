@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getBooks } from './api-utils';
+import { Link } from 'react-router-dom';
 
 export default class ListPage extends Component {
     state = {
@@ -21,8 +22,9 @@ export default class ListPage extends Component {
                 <h1 className="list-title">List Page</h1>
                 <div className="list-booklist">
 
-                    {this.state.books.map(book =>
-                        <div key={book.name} className="list-book-item">
+                    {this.state.books.map(book => <Link
+                        to={`books/${book.id}`} key={book.name}>
+                        <div className="list-book-item">
                             <p>Title: {book.title}</p>
                             <p> Category: {book.category}</p>
                             <p>Author: {book.author}</p>
@@ -30,9 +32,10 @@ export default class ListPage extends Component {
                             <p>{book.hardcover ? 'Hardcover' : 'Paperback'}</p>
                             <p>Shipping: {book.shipping}</p>
                         </div>
+                    </Link>
                     )}
                 </div>
-            </div>
+            </div >
         )
     }
 }
