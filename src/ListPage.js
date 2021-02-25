@@ -22,12 +22,12 @@ export default class ListPage extends Component {
                 <div className="list-booklist">
 
                     {this.state.books.map(book =>
-                        <div className="list-book-item">
+                        <div key={book.name} className="list-book-item">
                             <p>Title: {book.title}</p>
                             <p> Category: {book.category}</p>
                             <p>Author: {book.author}</p>
                             <p> Price: ${book.price}</p>
-                            {/* <p>{book.hardcover ? 'Is is a hardcover?'}</p> */}
+                            <p>{book.hardcover ? 'Hardcover' : 'Paperback'}</p>
                             {/* <p>book.shipping</p> */}
                         </div>
                     )}
