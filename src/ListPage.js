@@ -28,7 +28,7 @@ export default class ListPage extends Component {
                             <p>Author: {book.author}</p>
                             <p> Price: ${book.price}</p>
                             <p>{book.hardcover ? 'Hardcover' : 'Paperback'}</p>
-                            {/* <p>book.shipping</p> */}
+                            <p>Shipping: {book.shipping}</p>
                         </div>
                     )}
                 </div>
